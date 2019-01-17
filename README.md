@@ -10,5 +10,5 @@ Website that allows you to book private parking spots near your destination.
 - `npm install` to install all required dependencies
 
 ## **Author**
-- [Pareen Patel](https://www.linkedin.com/in/pareen-patel/)
-- [Ben Chafik](https://www.linkedin.com/in/aymane-chafik-ben/)
+- [**Pareen Patel**](https://www.linkedin.com/in/pareen-patel/)
+- [**Ben Chafik**](https://www.linkedin.com/in/aymane-chafik-ben/)
