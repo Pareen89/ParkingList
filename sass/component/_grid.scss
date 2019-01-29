@@ -1,0 +1,50 @@
+.container-one{
+    display: grid;
+    grid-template-columns: 25% auto auto 25%;
+    grid-template-rows: repeat(3,1fr);
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    @include respond(phone){
+        grid-template-rows: repeat(4,1fr);
+        row-gap: 10rem;
+    }
+}
+.results__container{
+    display: grid;
+    grid-template-columns: 25vw 75vw;
+    grid-template-rows: 20vh;
+}
+.container-two{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,1fr);
+}
+.container-three{
+    display: grid;
+    grid-template-columns: 2% 1fr 1fr 1fr 1fr 2%;
+    grid-template-rows: 20vh;
+}
+.container-four{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 20vh;
+    width: 100%;
+}
+.container-five{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 8fr 1.5fr;
+}
+.map__container{
+    display: grid;
+    grid-template-columns: 25vw 75vw;
+    grid-template-rows: 65vh;
+}
+.hidden-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 10%;
+    justify-items: center;
+    align-items: center;
+}

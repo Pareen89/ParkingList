@@ -1,0 +1,21 @@
+// form button
+.button_one{
+    height: $form-height;
+    border-radius: $form-radius;
+    border: none;
+    text-align: center;
+    background-color: $form-background-color;
+    padding: 0 $form-width;
+    @include respond(phone){
+        height: calc(#{$form-height * 1.5});
+        width: 45rem;
+    }
+}
+.button_two{
+    height: 5rem;
+    width: 75%;
+    border-radius: $form-radius;
+    border: none;
+    text-align: center;
+    background-color: #EEECEC;
+}

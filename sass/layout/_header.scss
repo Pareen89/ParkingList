@@ -1,0 +1,90 @@
+.header{
+    background-color: white;
+    height: $header-height;
+    padding: 0 5rem;
+    position: relative;
+    z-index: 4;
+  
+    &__logo{
+        color: $header-font-color;
+        font-size: $header-logo-size;
+        text-transform: uppercase;
+        float: left;
+        line-height: $header-height;
+        letter-spacing: .2rem;
+
+    }
+    &__menu_image{
+        font-size: $header-logo-size;
+        float: right;
+        display: none;
+        line-height: $header-height;
+        cursor: pointer;
+        @include respond(tab-port){
+            display: block;
+        }
+    }
+    &__nav{
+        float: right;
+        @include respond(tab-port){
+            //display: none;
+            position: absolute;
+            background-color: $header-background-color;
+            top: calc(-800% - #{$header-height});
+            left: 0;
+            height: calc(100vh - #{$header-height});
+            width: 100vw;
+            transition: all 1s  ease-in-out;
+            z-index: -1;
+            overflow: hidden;
+        }
+        &-menu{
+            display: flex;
+            text-transform: uppercase;
+            @include respond(tab-port){
+                display: block;
+                text-align: center;   
+            }
+
+            li{
+                list-style: none;
+                padding: 0 2rem;
+                a{
+                  padding: 1.5rem 0;
+                  line-height: $header-height;
+                  font-size: $header-menu-font-size;
+                  text-decoration: none;
+                  font-weight: 400;
+                  &:hover{
+                      border-top: 1px solid $header-font-color;
+                      border-bottom: 1px solid $header-font-color;
+                  }
+                  &:link{
+                      color: $header-font-color;
+                  }
+                  &:visited{
+                    color: $header-font-color;
+                    }
+                
+
+                }
+                
+            }
+
+        }
+    }
+    &__active{
+        top: $header-height;
+    }
+}
+
+a{
+    color: $form-font-color;
+    text-decoration: none;
+    &:link{
+        color: $header-font-color;
+    }
+    &::visited{
+        color: $header-font-color
+    }
+}

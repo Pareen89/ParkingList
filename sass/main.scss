@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/////////////// Glider///////////////
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// @import //"node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+/////////////// Abstract Folder//////
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
+/////////// Base Folder//////////////
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+/////////// Component Folder//////////
+@import "component/buttons";
+@import "component/forms";
+@import "component/glider";
+@import "component/grid";
+@import "component/map";
+////////////Layout Folder/////////////
+@import "layout/footer";
+@import "layout/header";
+
+/////////////// Pages Folder/////////////
+@import "pages/homepage";
+@import "pages/resultpage";
+
+
+
+
+
+
