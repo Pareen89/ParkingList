@@ -1,4 +1,5 @@
 <?php include 'inc/header.php' ?>
+<?php require 'inc/navigation.php' ?>
 
     <section class="results">
         <div class="map__container">

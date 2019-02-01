@@ -1,21 +1,17 @@
 <?php require "inc/header.php"; ?>
 
-<form action="inc/signin.inc.php" method="post">
-    <input type="text" name="mailuid" placeholder="E-Mail/Username">
-    <input type="password" name="pwd" placeholder="Password">
-    <button type="submit" name="login-submit">LogIn</button>
-</form>
-<a href="signup.php">SignUp</a>
-<form action="inc/logout.php" method="post">
-    <button type="submit" name="logout-submit">Logout</button>
-</form>
-<?php 
-if (isset($_SESSION['userId'])) {
-    echo '<p class="login-status">You are logged In</p>';
-} else {
-    echo '<p class="login-status">You are logged out</p>';
-}
-?>
+<section class="signin">
+    <?php require 'inc/navigation.php' ?>
+    <?php require 'inc/signinError.php' ?>
+    <form class="signin__form" action="inc/signin.inc.php" method="post">
+        <input class="signin__form-email" type="text" name="mailuid" placeholder="E-Mail/Username">
+        <input class="signin__form-passowrd" type="password" name="pwd" placeholder="Password">
+        <button class="signin__form-button" type="submit" name="login-submit">LogIn</button>
+        <a class="signin__form-signup" href="signup.php">Create an account</a>
+        <a class="signin__form-forgot" href="forgotpassword.php">Forgot password?</a>
+    </form>
+</section>
+
 
 
 

@@ -1,14 +1,13 @@
-<?php include 'inc/header.php'; ?>
-
-    <section class="homepage">
-        <div class="homepage__background"></div>
-        <form action="searchpage.php" class="homepage__form container-one">
-            <i class="homepage__form-searchIcon fas fa-search"></i>
-            <input id="geocoder" type="text" placeholder="Destination" onfocus="this.value=''" class="button_one homepage__form-destination">
-            <input type="text" placeholder="Arriving" class="button_one homepage__form-arriving" readonly>
-            <input type="text" placeholder="Departing" class="button_one homepage__form-departing" readonly>
-            <button type="submit" class="button_one homepage__form-submit">Show Parking Spaces</button>
-        </form>
-    </section>
-
-<?php include 'inc/footer.php'; ?>
+<?php require 'inc/header.php' ?>
+    <main>
+        <section class="homepage">
+           <?php require 'inc/navigation.php' ?>
+            <form action="searchpage.php" class=" form-container homepage__form">
+                <input id="geocoder" type="text" placeholder="Destination" onfocus="this.value=''" class="homepage__form-destination">
+                <input type="text" placeholder="Arriving" class="homepage__form-arriving">
+                <input type="text" placeholder="Departing" class="homepage__form-departing">
+                <button action="searchpage.php" type="submit" class="homepage__form-search">Search</button>
+            </form>
+        </section>
+    </main>
+<?php require 'inc/footer.php' ?>

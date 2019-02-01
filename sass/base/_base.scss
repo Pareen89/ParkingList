@@ -26,5 +26,41 @@ html {
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+input{
+    &:focus{
+        outline: none;
+    }
+     &::placeholder{
+         font-size: 1.8rem;
+         color: $form-font-color;
+         letter-spacing: .2rem;
+         @include respond(phone){
+             font-size: calc(#{$form-font-size * 1.8});
+         }
+  }
+}
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: .2rem solid black;
+    font-size: $form-font-size;
+    color: $form-font-color;
+}
+input[type=password] {
+    background: transparent;
+    border: none;
+    border-bottom: .2rem solid black;
+    font-size: $form-font-size;
+    color: $form-font-color;
+}
 
-
+a{
+    color: $form-font-color;
+    text-decoration: none;
+    &:link{
+        color: $header-font-color;
+    }
+    &::visited{
+        color: $header-font-color
+    }
+}

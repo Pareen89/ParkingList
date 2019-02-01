@@ -1,7 +1,7 @@
 // onclick to add pull down menu when on mobile screens
 let menuActive = () => {
-    let element = document.getElementById('header__nav');
-    element.classList.toggle("header__active");
+    let element = document.getElementById('nav_menu');
+    element.classList.toggle("nav__active");
 }
 
 let hiddenEdit = () => {

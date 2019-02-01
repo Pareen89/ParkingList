@@ -25,10 +25,10 @@ if (isset($_POST['login-submit'])) {
                     exit();
                 } else if ($pwdCheck == true) {
                     session_start();
-                    $_SESSION['userId'] = $row['idUsers'];
-                    $_SESSION['userUid'] = $row['uidUsers'];
+                    $_SESSION['id'] = $row['idUsers'];
+                    $_SESSION['username'] = $row['uidUsers'];
 
-                    header("Location: ../signin.php?login=success");
+                    header("Location: ../index.php?login=success");
                     exit();
 
                 } else {

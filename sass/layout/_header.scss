@@ -1,10 +1,15 @@
-.header{
-    background-color: white;
+///////////////////////////////////////////
+///////////////Navigation Bar//////////////
+///////////////////////////////////////////
+.nav{
     height: $header-height;
+    background-color: transparent;
+    line-height: $header-height;
     padding: 0 5rem;
-    position: relative;
-    z-index: 4;
-  
+    z-index: 0;
+///////////////////////////////////////////
+///////////////Navigation Logo/////////////
+///////////////////////////////////////////
     &__logo{
         color: $header-font-color;
         font-size: $header-logo-size;
@@ -12,52 +17,57 @@
         float: left;
         line-height: $header-height;
         letter-spacing: .2rem;
-
+        cursor: pointer;
     }
-    &__menu_image{
-        font-size: $header-logo-size;
-        float: right;
+///////////////////////////////////////////
+/////////////Navigation Menu Icon//////////
+///////////////////////////////////////////
+    &__menuIcon{
         display: none;
+        float: right;
         line-height: $header-height;
+        font-size: $header-logo-size;
         cursor: pointer;
         @include respond(tab-port){
             display: block;
         }
+        
     }
-    &__nav{
+///////////////////////////////////////////
+/////////////Navigation Menu///////////////
+///////////////////////////////////////////
+    &__menu{
         float: right;
         @include respond(tab-port){
-            //display: none;
-            position: absolute;
-            background-color: $header-background-color;
-            top: calc(-800% - #{$header-height});
-            left: 0;
-            height: calc(100vh - #{$header-height});
-            width: 100vw;
-            transition: all 1s  ease-in-out;
-            z-index: -1;
-            overflow: hidden;
+            display: none;
         }
-        &-menu{
-            display: flex;
+        &-list{
             text-transform: uppercase;
-            @include respond(tab-port){
-                display: block;
-                text-align: center;   
-            }
-
+            display: flex;
             li{
                 list-style: none;
-                padding: 0 2rem;
+                &:not(:last-child){
+                    padding-right: 2.5rem;
+                }
                 a{
                   padding: 1.5rem 0;
                   line-height: $header-height;
                   font-size: $header-menu-font-size;
                   text-decoration: none;
-                  font-weight: 400;
-                  &:hover{
-                      border-top: 1px solid $header-font-color;
-                      border-bottom: 1px solid $header-font-color;
+                  font-weight: 500;
+                  position: relative;
+                  &:after{
+                      content: "";
+                      position: absolute;
+                      border-bottom: .2rem solid black;
+                      bottom: 0;
+                      left: 0;
+                      right: 100%;
+                      transition: all .3s ease-in-out;
+                  }
+                  &:hover:after{
+                     right: 0;
+
                   }
                   &:link{
                       color: $header-font-color;
@@ -70,21 +80,9 @@
                 }
                 
             }
-
         }
     }
     &__active{
         top: $header-height;
-    }
-}
-
-a{
-    color: $form-font-color;
-    text-decoration: none;
-    &:link{
-        color: $header-font-color;
-    }
-    &::visited{
-        color: $header-font-color
     }
 }

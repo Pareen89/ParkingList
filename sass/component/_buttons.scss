@@ -1,16 +1,4 @@
-// form button
-.button_one{
-    height: $form-height;
-    border-radius: $form-radius;
-    border: none;
-    text-align: center;
-    background-color: $form-background-color;
-    padding: 0 $form-width;
-    @include respond(phone){
-        height: calc(#{$form-height * 1.5});
-        width: 45rem;
-    }
-}
+
 .button_two{
     height: 5rem;
     width: 75%;
@@ -18,4 +6,18 @@
     border: none;
     text-align: center;
     background-color: #EEECEC;
+}
+button{
+    border: .2rem solid black;
+    background-color: transparent;
+    padding: 1rem 3rem;
+    color: $form-font-color;
+    font-size: $form-font-size;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover{
+        background-color: black;
+        color: white;
+    }
 }

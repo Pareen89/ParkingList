@@ -1,0 +1,44 @@
+.signin{
+    height: 100vh;
+    background-color: white;
+    z-index: 0;
+    font-size: 1.8rem;
+    &__form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 5rem;
+        column-gap: 2rem;
+        width:35%;
+        @include position(50%, 50%);
+        &-email{
+            grid-column:1/3 ;
+            grid-row:1/2 ;
+        }
+        &-passowrd{
+            grid-column:1/3 ;
+            grid-row:2/3 ;
+        }
+        &-button{
+            grid-column: 1/3;
+            grid-row: 3/4;
+            width: 30%;
+            margin-left: 33%;
+        }
+        &-signup{
+            grid-column: 1/2;
+            grid-row:4/5 ;
+            justify-self: start;
+            align-self: center;
+        }
+        &-forgot{
+            grid-column:2/3 ;
+            grid-row:4/5 ;
+            justify-self: end;
+            align-self: center;
+        }
+    }
+}
+
+
+
