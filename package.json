@@ -9,9 +9,9 @@
   "author": "Pareen Patel",
   "license": "ISC",
   "devDependencies": {
+    "@glidejs/glide": "^3.2.4",
+    "barba.js": "^1.0.0",
     "node-sass": "^4.11.0"
   },
-  "dependencies": {
-    "@glidejs/glide": "^3.2.4"
-  }
+  "dependencies": {}
 }

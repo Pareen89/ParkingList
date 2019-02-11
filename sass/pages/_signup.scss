@@ -1,12 +1,6 @@
 .signup{
     height: 100vh;
-    background: white;
-
-    // background: url("../img/si.jpg");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // position: relative;
+    background-color: rgba(10,10,10,0.1);
     font-size: 1.8rem;
     &__form{
         display: grid;

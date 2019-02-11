@@ -1,23 +1,54 @@
 
-.button_two{
-    height: 5rem;
-    width: 75%;
-    border-radius: $form-radius;
-    border: none;
-    text-align: center;
-    background-color: #EEECEC;
-}
-button{
-    border: .2rem solid black;
+
+.button{
+    border: .2rem solid rgba(0, 0, 0, 0.9);
     background-color: transparent;
     padding: 1rem 3rem;
-    color: $form-font-color;
+    color: black;
     font-size: $form-font-size;
     letter-spacing: .2rem;
     cursor: pointer;
     transition: all .3s ease-in-out;
     &:hover{
         background-color: black;
+        border: .2rem solid transparent;
         color: white;
     }
+}
+.button2{
+    background-color: transparent;
+    border:white;
+    color: white;
+    font-size: $form-font-size;
+}
+.buttonWhite{
+    border: .2rem solid white;
+    background-color: transparent;
+    padding: 1rem 3rem;
+    color: white;
+    font-size: $form-font-size;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.7);
+        border: .2rem solid transparent;
+        color: white;
+    }
+}
+
+
+.logout-button{
+        border: .2rem solid white;
+        background-color: transparent;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        color: white;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover{
+            background-color: white;
+            border: .2rem solid transparent;
+            color: black;
+        }
 }

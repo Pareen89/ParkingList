@@ -24,7 +24,7 @@ html {
   }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 input{
     &:focus{
@@ -63,4 +63,22 @@ a{
     &::visited{
         color: $header-font-color
     }
+}
+textarea{
+    border: .2rem solid black;
+    background-color: rgba(10,10,10,0.001);
+    font-size: $form-font-size;
+    color: $form-font-color;
+    padding: 1rem;
+    &:focus{
+        outline: none;
+    }
+     &::placeholder{
+         font-size: 1.8rem;
+         color: $form-font-color;
+         letter-spacing: .2rem;
+         @include respond(phone){
+             font-size: calc(#{$form-font-size * 1.8});
+         }
+  }
 }

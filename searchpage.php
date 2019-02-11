@@ -1,16 +1,13 @@
 <?php include 'inc/header.php' ?>
-<?php require 'inc/navigation.php' ?>
-
     <section class="results">
+        <?php require 'inc/navigation.php' ?>
         <div class="map__container">
-            <div id="map" class="map">
-            </div>
+            <div id="map" class="map"></div>
             <div id="hidden-edit" class="hidden-container hidden-edit">
-                <i class="hidden-edit-menulogo fas fa-search"></i>
                 <input type="text" placeholder="Destination" onfocus="this.value=''" class="hidden-edit-destination button_two">
                 <input type="text" placeholder="Arriving" class="hidden-edit-arriving button_two" readonly>
                 <input type="text" placeholder="Departing" class="hidden-edit-departing button_two" readonly>
-                <button type="submit" class="hidden-edit-button button_two">Show
+                <button type="submit" class="hidden-edit-button buttonWhite">Show
                     Parking
                     Spaces</button>
             </div>
@@ -37,7 +34,7 @@
                 <p class="hidden-info-reviewtext">
                     <div class="review"></div>
                 </p>
-                <button class="hidden-info-contact">Contact Owner</button>
+                <button class="hidden-info-contact buttonWhite">Contact Owner</button>
             </div>
         </div>
         <div class="results__container">
@@ -55,6 +52,48 @@
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <div class="glide__slides">
+                        <div id="hidden-info-page" class="glide__slide listing container-four">
+                            <p class="listing__title">
+                                Parking on ${Street Name}
+                            </p>
+                            <p class="listing__distance">
+                                0.17 miles
+                            </p>
+                            <p class="listing__review">
+                                Reviews
+                            </p>
+                            <p class="listing__price">
+                                $2.12
+                            </p>
+                        </div>
+                        <div id="hidden-info-page" class="glide__slide listing container-four">
+                            <p class="listing__title">
+                                Parking on ${Street Name}
+                            </p>
+                            <p class="listing__distance">
+                                0.17 miles
+                            </p>
+                            <p class="listing__review">
+                                Reviews
+                            </p>
+                            <p class="listing__price">
+                                $2.12
+                            </p>
+                        </div>
+                        <div id="hidden-info-page" class="glide__slide listing container-four">
+                            <p class="listing__title">
+                                Parking on ${Street Name}
+                            </p>
+                            <p class="listing__distance">
+                                0.17 miles
+                            </p>
+                            <p class="listing__review">
+                                Reviews
+                            </p>
+                            <p class="listing__price">
+                                $2.12
+                            </p>
+                        </div>
                         <div id="hidden-info-page" class="glide__slide listing container-four">
                             <p class="listing__title">
                                 Parking on ${Street Name}

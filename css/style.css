@@ -76,7 +76,7 @@ html {
       font-size: 40%; } }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  font-family: 'Raleway', sans-serif; }
 
 input:focus {
   outline: none; }
@@ -111,26 +111,68 @@ a {
   a::visited {
     color: #000000; }
 
-.button_two {
-  height: 5rem;
-  width: 75%;
-  border-radius: 1.2rem;
-  border: none;
-  text-align: center;
-  background-color: #EEECEC; }
-
-button {
+textarea {
   border: .2rem solid black;
+  background-color: rgba(10, 10, 10, 0.001);
+  font-size: 2rem;
+  color: #000000;
+  padding: 1rem; }
+  textarea:focus {
+    outline: none; }
+  textarea::placeholder {
+    font-size: 1.8rem;
+    color: #000000;
+    letter-spacing: .2rem; }
+    @media only screen and (max-width: 37.5em) {
+      textarea::placeholder {
+        font-size: calc(3.6rem); } }
+
+.button {
+  border: 0.2rem solid rgba(0, 0, 0, 0.9);
   background-color: transparent;
   padding: 1rem 3rem;
-  color: #000000;
+  color: black;
   font-size: 2rem;
   letter-spacing: .2rem;
   cursor: pointer;
   transition: all .3s ease-in-out; }
-  button:hover {
+  .button:hover {
     background-color: black;
+    border: .2rem solid transparent;
     color: white; }
+
+.button2 {
+  background-color: transparent;
+  border: white;
+  color: white;
+  font-size: 2rem; }
+
+.buttonWhite {
+  border: .2rem solid white;
+  background-color: transparent;
+  padding: 1rem 3rem;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out; }
+  .buttonWhite:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: .2rem solid transparent;
+    color: white; }
+
+.logout-button {
+  border: .2rem solid white;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  color: white;
+  cursor: pointer;
+  transition: all .3s ease-in-out; }
+  .logout-button:hover {
+    background-color: white;
+    border: .2rem solid transparent;
+    color: black; }
 
 .container-one {
   display: grid;
@@ -200,8 +242,7 @@ button {
   height: 15vh;
   background-color: transparent;
   line-height: 15vh;
-  padding: 0 5rem;
-  z-index: 0; }
+  padding: 0 5rem; }
   .nav__logo {
     color: #000000;
     font-size: 2.8rem;
@@ -209,6 +250,7 @@ button {
     float: left;
     line-height: 15vh;
     letter-spacing: .2rem;
+    z-index: 999;
     cursor: pointer; }
   .nav__menuIcon {
     display: none;
@@ -222,8 +264,50 @@ button {
   .nav__menu {
     float: right; }
     @media only screen and (max-width: 56.25em) {
-      .nav__menu {
+      .nav__menu-one {
         display: none; } }
+    .nav__menu-profile {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      width: 17vw;
+      cursor: pointer;
+      position: absolute;
+      top: 7.5%;
+      left: 91.5%;
+      transform: translate(-50%, -50%); }
+      @media only screen and (max-width: 56.25em) {
+        .nav__menu-profile {
+          width: 50vw;
+          position: absolute;
+          top: 7.5%;
+          left: 75%;
+          transform: translate(-50%, -50%); } }
+      .nav__menu-profile span {
+        padding-left: 1.5rem; }
+      .nav__menu-profile-active {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white; }
+        @media only screen and (max-width: 56.25em) {
+          .nav__menu-profile-active {
+            background-color: rgba(0, 0, 0, 0.975); } }
+      .nav__menu-profile:hover {
+        color: white; }
+    .nav__menu-username {
+      font-size: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      grid-column: 1/2;
+      justify-self: center;
+      align-self: center; }
+      @media only screen and (max-width: 56.25em) {
+        .nav__menu-username {
+          justify-self: end;
+          padding-right: 5rem; } }
+    .nav__menu-menuIcon {
+      position: absolute;
+      width: 3rem;
+      height: 1rem; }
     .nav__menu-list {
       text-transform: uppercase;
       display: flex; }
@@ -252,16 +336,135 @@ button {
             color: #000000; }
           .nav__menu-list li a:visited {
             color: #000000; }
+    .nav__menu-dropdown {
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 85vh;
+      width: 17vw;
+      overflow: hidden;
+      position: absolute;
+      top: 57.5%;
+      left: 91.5%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      display: none; }
+      @media only screen and (max-width: 56.25em) {
+        .nav__menu-dropdown {
+          width: 50vw;
+          position: absolute;
+          top: 57.5%;
+          left: 75%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(0, 0, 0, 0.975); } }
+      .nav__menu-dropdown-active {
+        display: grid; }
+      .nav__menu-dropdown .profile {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-self: center;
+        align-self: center; }
+      .nav__menu-dropdown .about {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        justify-self: center;
+        align-self: center; }
+      .nav__menu-dropdown .space {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        justify-self: center;
+        align-self: center; }
+      .nav__menu-dropdown .dropdown-contact {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        justify-self: center;
+        align-self: center; }
+      .nav__menu-dropdown .logout {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        justify-self: center;
+        align-self: center;
+        padding-right: 10%; }
+      .nav__menu-dropdown li {
+        padding-left: 10%;
+        text-align: right;
+        list-style: none;
+        text-transform: uppercase; }
+        .nav__menu-dropdown li:not(:last-child) {
+          padding-right: 2.5rem; }
+        .nav__menu-dropdown li a {
+          padding: 1.5rem 0;
+          line-height: 15vh;
+          font-size: 1.4rem;
+          text-decoration: none;
+          font-weight: 500;
+          position: relative; }
+          .nav__menu-dropdown li a:after {
+            content: "";
+            position: absolute;
+            border-bottom: .2rem solid white;
+            bottom: 0;
+            left: 0;
+            right: 100%;
+            transition: all .3s ease-in-out; }
+          .nav__menu-dropdown li a:hover:after {
+            right: 0; }
+          .nav__menu-dropdown li a:link {
+            color: white; }
+          .nav__menu-dropdown li a:visited {
+            color: white; }
   .nav__active {
     top: 15vh; }
 
+.contact {
+  height: 100vh;
+  background-color: rgba(10, 10, 10, 0.1);
+  font-size: 1.8rem; }
+  .contact__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    width: 40%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-row-gap: 2rem; }
+    .contact__form-button {
+      width: 25%;
+      position: absolute;
+      top: 93%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+.forgot {
+  font-size: 1.8rem;
+  height: 100vh;
+  background-color: rgba(10, 10, 10, 0.1); }
+  .forgot__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5rem;
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .forgot__form-button {
+      width: 25%;
+      position: absolute;
+      top: 93%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
 .homepage {
   height: 100vh;
-  background: url("../img/fp1.jpg");
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 255, 0.1)), url("../img/fp1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
   z-index: 0; }
   @media only screen and (max-width: 37.5em) {
     .homepage {
@@ -314,7 +517,7 @@ button {
   text-align: center; }
 
 .results {
-  height: 15vh; }
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.1)); }
   .results__container-edit {
     grid-column: 1/2;
     justify-items: center;
@@ -327,7 +530,6 @@ button {
       align-self: start; }
     .results__container-edit-button {
       padding: .5rem 1.5rem;
-      border-radius: 1rem;
       border: solid .1rem black;
       color: white;
       background-color: black;
@@ -364,7 +566,7 @@ button {
   height: 100%;
   width: 100%;
   z-index: 2;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.8);
   display: none; }
   .hidden-edit-active {
     display: grid; }
@@ -372,20 +574,16 @@ button {
     grid-row: 2/3;
     grid-column: 1/2; }
     .hidden-edit-destination:focus {
-      outline: none;
-      border: .2rem solid black;
-      border-radius: 1.2rem; }
+      outline: none; }
     .hidden-edit-destination::placeholder {
       font-size: 1.8rem;
       letter-spacing: .2rem;
-      color: black; }
+      color: white; }
   .hidden-edit-arriving {
     grid-row: 3/4;
     grid-column: 1/2; }
     .hidden-edit-arriving:focus {
-      outline: none;
-      border: .2rem solid black;
-      border-radius: 1.2rem; }
+      outline: none; }
     .hidden-edit-arriving::placeholder {
       font-size: 1.8rem;
       letter-spacing: .2rem;
@@ -394,25 +592,14 @@ button {
     grid-row: 4/5;
     grid-column: 1/2; }
     .hidden-edit-departing:focus {
-      outline: none;
-      border: .2rem solid black;
-      border-radius: 1.2rem; }
+      outline: none; }
     .hidden-edit-departing::placeholder {
       font-size: 1.8rem;
       letter-spacing: .2rem;
       color: black; }
   .hidden-edit-button {
     grid-row: 5/6;
-    grid-column: 1/2;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    font-size: 1.8rem;
-    letter-spacing: .2rem; }
-    .hidden-edit-button:focus {
-      outline: none;
-      border: .2rem dotted white;
-      border-radius: 1.2rem; }
+    grid-column: 1/2; }
   .hidden-edit-menulogo {
     grid-row: 2/3;
     grid-column: 1/2; }
@@ -423,8 +610,9 @@ button {
   height: 100%;
   width: 100%;
   z-index: 2;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.8);
   letter-spacing: .2rem;
+  color: white;
   display: none; }
   .hidden-info-active {
     display: grid; }
@@ -464,16 +652,9 @@ button {
     font-size: 1.2rem;
     line-height: 2rem; }
   .hidden-info-contact {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    font-size: 1.4rem;
-    border-radius: 2rem;
+    width: 75%;
     justify-self: center;
-    align-self: center;
-    height: 5rem;
-    width: 20rem;
-    border: none; }
+    align-self: center; }
 
 .listing {
   font-size: 1.4rem;
@@ -498,7 +679,6 @@ button {
     grid-row: 3/4;
     justify-self: center;
     padding: .5rem 1.5rem;
-    border-radius: 1rem;
     border: solid .1rem black;
     color: black;
     background-color: white;
@@ -528,10 +708,11 @@ button {
   right: .5rem; }
 
 .signin {
+  font-size: 1.8rem;
   height: 100vh;
-  background-color: white;
-  z-index: 0;
-  font-size: 1.8rem; }
+  width: 100vw;
+  background-color: rgba(10, 10, 10, 0.1);
+  position: absolute; }
   .signin__form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -567,7 +748,7 @@ button {
 
 .signup {
   height: 100vh;
-  background: white;
+  background-color: rgba(10, 10, 10, 0.1);
   font-size: 1.8rem; }
   .signup__form {
     display: grid;

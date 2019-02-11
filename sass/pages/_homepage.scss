@@ -1,10 +1,13 @@
 .homepage{
     height: 100vh;
-    background: url($background-image);
+    width: 100vw;
+    background: linear-gradient(
+        rgba(0,0,0,0.1),
+        rgba(0,0,255,0.1)), 
+    url($background-image);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
     z-index: 0;
     @include respond(phone){
         background: none;

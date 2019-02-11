@@ -1,0 +1,19 @@
+.contact{
+    height: 100vh;
+    background-color: rgba(10,10,10,0.1);
+    font-size: 1.8rem;
+    &__form{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 4fr 1fr;
+        width: 40%;
+        @include position(55%,50%);
+        grid-row-gap: 2rem;
+        
+        &-button{
+            width: 25%;
+            @include position(93%,50%);
+        }
+    }
+
+}

@@ -9,7 +9,7 @@
         <input class="signup__form-email" type="text" name="mail" placeholder="E-mail">
         <input class="signup__form-pwd" type="password" name="pwd" placeholder="Password">
         <input class="signup__form=retypepwd" type="password" name="pwd-repeat" placeholder="Repeat password">
-        <button class="signup__form-button" type="submit" name="signup-submit">Sign Up</button>
+        <button class="signup__form-button button" type="submit" name="signup-submit">Sign Up</button>
     </form>
 </section>
 

@@ -2,10 +2,10 @@
 
 </section>
 
-<script src="js/map.js"></script>
-<script src="js/style.js"></script>
+
 <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-<script src="js/glide.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+<script src="js/style.js"></script>
 </body>
 
 </html>
